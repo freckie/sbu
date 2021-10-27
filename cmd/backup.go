@@ -43,3 +43,11 @@ func backup(cmd *cobra.Command, args []string) error {
 	fmt.Printf("%s moved to %s successfully.\n", args[0], newFile)
 	return nil
 }
+
+func backupFiles(files []string) error {
+	return nil
+}
+
+func backupDirectory(dir string) error {
+	return nil
+}

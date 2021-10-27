@@ -5,7 +5,7 @@ import (
 )
 
 var (
-	backupDir = "/var/lib/sbu"
+	backupDir = "~/.sbu"
 
 	rootCmd = &cobra.Command{
 		Use:   "sbu",
