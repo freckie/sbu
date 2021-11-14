@@ -16,6 +16,6 @@ var versionCmd = &cobra.Command{
 	Long:    `Get the version of sbu.`,
 	Aliases: []string{"v"},
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("sbu version v0.0.1")
+		fmt.Println("sbu version v0.0.2")
 	},
 }

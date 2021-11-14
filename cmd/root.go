@@ -1,11 +1,14 @@
 package cmd
 
 import (
+	"log"
+	"os/user"
+
 	"github.com/spf13/cobra"
 )
 
 var (
-	backupDir = "/var/lib/sbu"
+	backupDir string
 
 	rootCmd = &cobra.Command{
 		Use:   "sbu",
@@ -20,6 +23,14 @@ func Execute() error {
 }
 
 func init() {
+	user, err := user.Current()
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+
+	homeDir := user.HomeDir
+	backupDir = homeDir + "/.sbu"
+
 	rootCmd.AddCommand(backupCmd)
 	rootCmd.AddCommand(restoreCmd)
 	rootCmd.AddCommand(versionCmd)
