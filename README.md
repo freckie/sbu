@@ -3,7 +3,7 @@
 
 ## Installation
 ```bash
-SBU_VERSION=v0.0.1
+SBU_VERSION=v0.0.2
 curl -LO https://github.com/freckie/sbu/releases/download/$SBU_VERSION/release-$SBU_VERSION.tar.gz
 tar -xzvf ./release-$SBU_VERSION.tar.gz
 mv sbu /usr/local/bin
@@ -37,6 +37,5 @@ sbu backup -r docs/
 sbu restore -r docs/
 
 # Restore all files and directories under this path
-sbu restore --all
 sbu restore .
 ```
